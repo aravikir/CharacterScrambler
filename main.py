@@ -28,6 +28,6 @@ def shuffler():
         
     my_label.config(text=random_word)
     
-shuffler()
+button_shuffle=Button(root,text='Shuffle now', command=shuffler)
 
 root.mainloop()
