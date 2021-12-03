@@ -22,10 +22,17 @@ def myshuffler():
     # Turn shuffled list into word
     fun_word=''
     for letter in break_word:
-        fun_word+=getvalue(letter)
+        fun_word+=checkandgetvalue(letter)
         
     my_label.delete(0,END)
     my_label.insert(0,fun_word)
+    
+def checkandgetvalue(myindex):
+    try:
+        myhash[myindex]
+    except KeyError:
+        return myindex
+    return getvalue(myindex)
 
 def getvalue(myindex):
     initvalue=myhash[myindex]
