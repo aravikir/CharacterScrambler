@@ -6,7 +6,8 @@ root=Tk()
 root.title('Character Scrambler')
 
 my_label = Label(root,text="",font=("Helvetica",48))
-my_label.grid(row=0,column=0)
+# my_label.grid(row=0,column=0)
+my_label.pack(pady=20)
 
 def shuffler():
     
