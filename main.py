@@ -1,5 +1,6 @@
 from tkinter import *
 from random import *
+from myhashmap import myhash
 
 
 root=Tk()
@@ -21,18 +22,23 @@ def myshuffler():
     random_word = choice(states)
     
     # Break string entered
-    temp=mystring.get()
-    break_word = list(temp)
-    shuffle(break_word)
+    myinput=mystring.get()
+    break_word = list(myinput)
+    # shuffle(break_word)
     
     # Turn shuffled list into word
     fun_word=''
     for letter in break_word:
-        fun_word+=letter
+        fun_word+=getvalue(letter)
         
     my_label.config(text=fun_word)
-    myanswer.delete(0,END)
+    # myanswer.delete(0,END)
 
+def getvalue(myindex):
+    initvalue=myhash[myindex]
+    turnvaluetolist=list(initvalue)
+    chosenone=choice(turnvaluetolist)
+    return chosenone
 
 button_shuffle=Button(root,text='Shuffle now', command=myshuffler)
 button_shuffle.pack(pady=20)
