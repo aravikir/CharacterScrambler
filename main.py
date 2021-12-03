@@ -17,6 +17,16 @@ def shuffler():
     
     # Pick random word from list
     random_word = choice(states)
+    
+    # Break word
+    break_word = list(random_word)
+    shuffle(break_word)
+    
+    # Turn shuffled list into word
+    shuffled_word=''
+    for letter in break_word:
+        shuffled_word+=letter
+        
     my_label.config(text=random_word)
     
 shuffler()
