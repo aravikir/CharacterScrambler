@@ -10,7 +10,6 @@ myanswer=Entry(root,font=("Helvetica",24),textvariable=mystring)
 myanswer.pack()
 
 my_label = Label(root,text="",font=("Helvetica",48))
-# my_label.grid(row=0,column=0)
 my_label.pack(pady=20)
 
 def myshuffler():
@@ -37,7 +36,5 @@ def myshuffler():
 
 button_shuffle=Button(root,text='Shuffle now', command=myshuffler)
 button_shuffle.pack(pady=20)
-
-
 
 root.mainloop()
