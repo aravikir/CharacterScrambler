@@ -1,5 +1,6 @@
 from tkinter import *
 from random import *
+import myhashmap
 
 
 root=Tk()
@@ -33,6 +34,11 @@ def myshuffler():
     my_label.config(text=fun_word)
     myanswer.delete(0,END)
 
+def getvalue(myindex):
+    initvalue=myhashmap(myindex)
+    turnvaluetolist=list(initvalue)
+    chosenone=choice(turnvaluetolist)
+    return chosenone
 
 button_shuffle=Button(root,text='Shuffle now', command=myshuffler)
 button_shuffle.pack(pady=20)
