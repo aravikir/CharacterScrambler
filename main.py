@@ -35,7 +35,7 @@ def myshuffler():
     myanswer.delete(0,END)
 
 def getvalue(myindex):
-    initvalue=myhashmap(myindex)
+    initvalue=myhashmap[myindex]
     turnvaluetolist=list(initvalue)
     chosenone=choice(turnvaluetolist)
     return chosenone
