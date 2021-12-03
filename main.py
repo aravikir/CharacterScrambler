@@ -5,6 +5,9 @@ from random import *
 root=Tk()
 root.title('Character Scrambler')
 
+myanswer=Entry(root,font=("Helvetica",24))
+myanswer.pack(pady=20)
+
 my_label = Label(root,text="",font=("Helvetica",48))
 # my_label.grid(row=0,column=0)
 my_label.pack(pady=20)
@@ -31,7 +34,6 @@ def myshuffler():
 button_shuffle=Button(root,text='Shuffle now', command=myshuffler)
 button_shuffle.pack(pady=20)
 
-myanswer=Entry(root,font=("Helvetica",24))
-myanswer.pack(pady=20)
+
 
 root.mainloop()
