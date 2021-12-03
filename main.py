@@ -9,7 +9,7 @@ my_label = Label(root,text="",font=("Helvetica",48))
 # my_label.grid(row=0,column=0)
 my_label.pack(pady=20)
 
-def shuffler():
+def myshuffler():
     
     # List of States
     states=['Washington', 'Indiana','California','New York','Texas']
@@ -28,6 +28,6 @@ def shuffler():
         
     my_label.config(text=random_word)
     
-button_shuffle=Button(root,text='Shuffle now', command=shuffler)
+button_shuffle=Button(root,text='Shuffle now', command=myshuffler)
 
 root.mainloop()
