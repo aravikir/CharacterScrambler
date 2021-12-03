@@ -31,4 +31,7 @@ def myshuffler():
 button_shuffle=Button(root,text='Shuffle now', command=myshuffler)
 button_shuffle.pack(pady=20)
 
+myanswer=Entry(root,font=("Helvetica",24))
+myanswer.pack(pady=20)
+
 root.mainloop()
