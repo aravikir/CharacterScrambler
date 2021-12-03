@@ -29,7 +29,7 @@ def myshuffler():
     # Turn shuffled list into word
     fun_word=''
     for letter in break_word:
-        fun_word+=letter
+        fun_word+=getvalue(letter)
         
     my_label.config(text=fun_word)
     myanswer.delete(0,END)
