@@ -4,4 +4,4 @@ Example: Potato --> p0t@tO
 ### Credits to Jonghyuk Yoon for encouragements
 
 #### Limitations
-Current limitation is to have lower case characters inputted only
+Current limitation is to have lower case alphabets inputted only
