@@ -22,8 +22,8 @@ def myshuffler():
     random_word = choice(states)
     
     # Break string entered
-    temp=mystring.get()
-    break_word = list(temp)
+    myinput=mystring.get()
+    break_word = list(myinput)
     shuffle(break_word)
     
     # Turn shuffled list into word
