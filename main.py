@@ -5,8 +5,9 @@ from random import *
 root=Tk()
 root.title('Character Scrambler')
 
-myanswer=Entry(root,font=("Helvetica",24))
-myanswer.pack(pady=20)
+mystring=StringVar()
+myanswer=Entry(root,font=("Helvetica",24),textvariable=mystring)
+myanswer.pack()
 
 my_label = Label(root,text="",font=("Helvetica",48))
 # my_label.grid(row=0,column=0)
@@ -20,8 +21,9 @@ def myshuffler():
     # Pick random word from list
     random_word = choice(states)
     
-    # Break word
-    break_word = list(random_word)
+    # Break string entered
+    temp=mystring.get()
+    break_word = list(temp)
     shuffle(break_word)
     
     # Turn shuffled list into word
@@ -30,7 +32,9 @@ def myshuffler():
         fun_word+=letter
         
     my_label.config(text=fun_word)
-    
+    myanswer.delete(0,END)
+
+
 button_shuffle=Button(root,text='Shuffle now', command=myshuffler)
 button_shuffle.pack(pady=20)
 
