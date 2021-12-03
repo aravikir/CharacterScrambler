@@ -17,7 +17,6 @@ def myshuffler():
     
     # Break string entered
     myinput=mystring.get()
-    myinput.lower()
     break_word = list(myinput)
     
     # Turn shuffled list into word
