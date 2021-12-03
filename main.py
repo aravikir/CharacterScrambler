@@ -22,12 +22,13 @@ def myshuffler():
     shuffle(break_word)
     
     # Turn shuffled list into word
-    shuffled_word=''
+    fun_word=''
     for letter in break_word:
-        shuffled_word+=letter
+        fun_word+=letter
         
-    my_label.config(text=random_word)
+    my_label.config(text=fun_word)
     
 button_shuffle=Button(root,text='Shuffle now', command=myshuffler)
+button_shuffle.pack(pady=20)
 
 root.mainloop()
