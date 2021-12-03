@@ -5,11 +5,14 @@ from random import *
 root=Tk()
 root.title('Character Scrambler')
 
+mystring=StringVar()
+myanswer=Entry(root,font=("Helvetica",24),textvariable=mystring)
+myanswer.pack()
+
 my_label = Label(root,text="",font=("Helvetica",48))
-# my_label.grid(row=0,column=0)
 my_label.pack(pady=20)
 
-def shuffler():
+def myshuffler():
     
     # List of States
     states=['Washington', 'Indiana','California','New York','Texas']
@@ -17,17 +20,21 @@ def shuffler():
     # Pick random word from list
     random_word = choice(states)
     
-    # Break word
-    break_word = list(random_word)
+    # Break string entered
+    temp=mystring.get()
+    break_word = list(temp)
     shuffle(break_word)
     
     # Turn shuffled list into word
-    shuffled_word=''
+    fun_word=''
     for letter in break_word:
-        shuffled_word+=letter
+        fun_word+=letter
         
-    my_label.config(text=random_word)
-    
-shuffler()
+    my_label.config(text=fun_word)
+    myanswer.delete(0,END)
+
+
+button_shuffle=Button(root,text='Shuffle now', command=myshuffler)
+button_shuffle.pack(pady=20)
 
 root.mainloop()
