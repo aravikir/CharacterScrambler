@@ -24,7 +24,7 @@ def myshuffler():
     # Break string entered
     myinput=mystring.get()
     break_word = list(myinput)
-    shuffle(break_word)
+    # shuffle(break_word)
     
     # Turn shuffled list into word
     fun_word=''
