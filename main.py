@@ -10,7 +10,8 @@ mystring=StringVar()
 myanswer=Entry(root,font=("Helvetica",24),textvariable=mystring)
 myanswer.pack()
 
-my_label = Label(root,text="",font=("Helvetica",48))
+# my_label = Label(root,text="",font=("Helvetica",48))
+my_label = Entry(root,text="",font=("Helvetica",48))
 my_label.pack(pady=20)
 
 def myshuffler():
@@ -31,7 +32,9 @@ def myshuffler():
     for letter in break_word:
         fun_word+=getvalue(letter)
         
-    my_label.config(text=fun_word)
+    # my_label.config(text=fun_word)
+    my_label.delete(0,END)
+    my_label.insert(0,fun_word)
     # myanswer.delete(0,END)
 
 def getvalue(myindex):
